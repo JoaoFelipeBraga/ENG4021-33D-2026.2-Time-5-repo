@@ -36,7 +36,7 @@ def exponenciacao( x, y):
     return x ** y
 
 def percentual(x, y):
-    return x / y * 100   
+    return x * y / 100
 
 def radiciacao(x, y):
     return x ** (1/y)
@@ -84,6 +84,6 @@ while True:
     elif opcao == 8:
         print(f"\nResultado: {resto(a, b)}\n")
     elif opcao == 9:
-        print(f"\nResultado: {percentual(a, b)} %\n")
+        print(f"\nResultado: {percentual(a, b)}\n")
     
     x = input("")
