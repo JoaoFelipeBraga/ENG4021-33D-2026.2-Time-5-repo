@@ -4,7 +4,7 @@ def Menu():
     print("--------------------------------------") 
     
 def opcoes():
-    print("""Escolha qual operação realizar.\n\n
+    print("""\nEscolha qual operação realizar.\n\n
           
           1 - Adição\n
           2 - Subtração\n
@@ -23,6 +23,12 @@ def opcoes():
 def soma(x, y):
     return x + y
 
+def divisao(x, y):
+    return x / y
+
+def subtracao(x, y):
+    return x - y
+    
 def multiplicacao(x, y):
     return x * y
 
@@ -30,7 +36,7 @@ def exponenciacao( x, y):
     return x ** y
 
 def percentual(x, y):
-    return (x * y) / 100    
+    return x / y * 100   
 
 def radiciacao(x, y):
     return x ** (1/y)
@@ -47,6 +53,10 @@ while True:
     
     if opcao == 0:
             break
+    elif opcao < 0 or opcao > 9:
+        print("\nOpção inválida! Tente novamente.\n")
+        x = input("")
+        continue
     
     a = float(input("\nInsira o primeiro número: "))
     b = float(input("Insira o segundo número: "))    
@@ -58,16 +68,22 @@ while True:
     elif opcao == 3:
         print(f"\nResultado: {multiplicacao(a, b)}\n")
     elif opcao == 4:
-        print(f"\nResultado: {divisao(a, b)}\n")
+        if b == 0:
+            print("\nDivisão por zero é indeterminada. Tente novamente.\n")
+        else:
+            print(f"\nResultado: {divisao(a, b)}\n") 
     elif opcao == 5:
         print(f"\nResultado: {exponenciacao(a, b)}\n")
     elif opcao == 6:
-        print(f"\nResultado: {radiciacao(a, b)}\n")
+        if a < 0 and b % 2 == 0:
+            print("\nRaíz imaginária. Tente novamente.\n")
+        else:
+            print(f"\nResultado: {radiciacao(a, b)}\n")
     elif opcao == 7:
         print(f"\nResultado: {divisao_inteira(a, b)}\n")
     elif opcao == 8:
         print(f"\nResultado: {resto(a, b)}\n")
     elif opcao == 9:
-        print(f"\nResultado: {percentual(a, b)}\n")
+        print(f"\nResultado: {percentual(a, b)} %\n")
     
     x = input("")
