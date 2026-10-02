@@ -1,0 +1,103 @@
+/* config básicas de corpo e fonte */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f5f5f4; 
+  margin: 0;
+  padding: 20px;
+}
+
+.top-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px; 
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain; 
+  border-radius: 4px;
+}
+
+/* barra de buscar */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* icone de procurar dentro da cpsule de barra */
+.search-icon {
+  position: absolute;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  color: #999;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 16px 14px 48px; 
+  border-radius: 999px; 
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: #9e9e9e;
+}
+
+.search-input:focus {
+  border-color: #292d42; 
+}
+
+
+/* filtro horizontal */
+.connecto-filtros {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+
+}
+
+/* ocultei a barra de scroll da barra de scroll hotizontal*/
+.connecto-filtros::-webkit-scrollbar {
+  display: none; 
+}
+
+
+.connecto-filtros__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* checkbox mais alinhado com a id visual capsule */
+.connecto-filtros__label {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  color: #555555;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;      
+  white-space: nowrap; 
+  transition: all 0.2s ease;
+}
+
+/*fica clicavel e responsivo pra identificaer o filtro */
+.connecto-filtros__input:checked + .connecto-filtros__label {
+  background-color: #292d42; /* Azul escuro do app */
+  color: #ffffff;
+  border-color: #292d42;
+}
