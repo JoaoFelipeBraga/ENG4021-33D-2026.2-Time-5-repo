@@ -1,0 +1,62 @@
+body {
+  background-color: #1f2235;
+  color: white;
+  font-family: Arial;
+}
+
+h1 {
+  text-align: center;
+}
+
+span {
+  color: green;
+}
+
+.slogan {
+  text-align: center;
+  color: lightgray;
+}
+
+.abas {
+  display: flex;
+  justify-content: center;
+}
+
+.abas a {
+  color: gray;
+  padding: 10px 40px;
+}
+
+.abas .ativa {
+  color: white;
+  border-bottom: 3px solid #4a8fd0;
+}
+
+form {
+  width: 300px;
+  margin: auto;
+}
+
+input {
+  width: 280px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+a {
+  color: #4a8fd0;
+  text-decoration: none;
+}
+
+.esqueci {
+  text-align: right;
+}
+
+button {
+  width: 300px;
+  padding: 12px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
